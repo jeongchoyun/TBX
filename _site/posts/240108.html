@@ -245,8 +245,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="블로그만들기" class="level1">
-<h1>3. 블로그만들기</h1>
+<section id="github-repo-clone-블로그만들기" class="level1">
+<h1>2. github repo clone + 블로그만들기</h1>
 <p>사용하기 까다로움. (블로그 게시물을 올리는 컴퓨터는 하나로 정리하는게 좋음)</p>
 <section id="a.-quarto설치" class="level2">
 <h2 class="anchored" data-anchor-id="a.-quarto설치">A. Quarto설치</h2>
@@ -263,9 +263,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="c.-github-repo-생성후-clone" class="level2">
 <h2 class="anchored" data-anchor-id="c.-github-repo-생성후-clone">C. github repo 생성후 clone</h2>
-
-
+<p><code>-</code> 적당한 이름의 repo를 만들것</p>
+<blockquote class="blockquote">
+<p>주의: repository 만들때 readme.md 파일을 생성 할 것. 그래야 이후의 작업이 편리.</p>
+</blockquote>
+<p><code>-</code> clone이후 local-git과 github를 연결</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone {복사한주소}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> {생성된디렉토리}</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">## README.md 파일 수정 </span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">## email, username 등록 </span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config credential.helper store</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">## username 입력</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">## token 입력</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> blog project 생성후 publish</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project <span class="at">--type</span> website:blog</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish <span class="at">--no-browser</span> </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">## github선택 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 이후에 수정사항이 생기면 아래를 연속적으로 실행</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish <span class="at">--no-browser</span> <span class="at">--no-prompt</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 깃헙에서 홈페이지 만들경우 대응하는 레포지토리를 찾으면 쉽게 복사가능.</p>
+<blockquote class="blockquote">
+<p>https://guebin.github.io/IP2022/2022/03/28/(4주차)-3월28일.html</p>
+</blockquote>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!wget "https://raw.githubusercontent.com/guebin/IP2022/master/_notebooks/2022-03-28-(4%EC%A3%BC%EC%B0%A8)%203%EC%9B%9428%EC%9D%BC.ipynb"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
+</section>
+<section id="주피터노트북파일에-이미지-넣기" class="level1">
+<h1>3.주피터노트북파일에 이미지 넣기</h1>
+<p><code>-</code> 방법1</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>imgs.xkcd.com<span class="op">/</span>comics<span class="op">/</span>sandwich.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>--2024-01-08 01:12:34--  https://imgs.xkcd.com/comics/sandwich.png
+Resolving imgs.xkcd.com (imgs.xkcd.com)... 146.75.48.67, 2a04:4e42:7c::67
+Connecting to imgs.xkcd.com (imgs.xkcd.com)|146.75.48.67|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11828 (12K) [image/png]
+Saving to: ‘sandwich.png’
+
+sandwich.png        100%[===================&gt;]  11.55K  --.-KB/s    in 0s      
+
+2024-01-08 01:12:35 (46.6 MB/s) - ‘sandwich.png’ saved [11828/11828]
+</code></pre>
+</div>
+</div>
+<p><code>-</code> 방법2</p>
+<p><img src="https://imgs.xkcd.com/comics/sandwich.png" class="img-fluid"></p>
+
+
 </section>
 
 </main> <!-- /main -->

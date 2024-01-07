@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jeongchoyun.github.io/TBX2024/about.html</loc>
-    <lastmod>2024-01-07T15:50:30.282Z</lastmod>
+    <lastmod>2024-01-07T16:25:34.935Z</lastmod>
   </url>
   <url>
-    <loc>https://jeongchoyun.github.io/TBX2024/posts/welcome/index.html</loc>
-    <lastmod>2024-01-07T15:50:29.250Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jeongchoyun.github.io/TBX2024/posts/post-with-code/index.html</loc>
-    <lastmod>2024-01-07T15:50:28.090Z</lastmod>
+    <loc>https://jeongchoyun.github.io/TBX2024/posts/240107.html</loc>
+    <lastmod>2024-01-07T16:25:34.155Z</lastmod>
   </url>
   <url>
     <loc>https://jeongchoyun.github.io/TBX2024/posts/240108.html</loc>
-    <lastmod>2024-01-07T15:50:28.878Z</lastmod>
+    <lastmod>2024-01-07T16:25:33.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeongchoyun.github.io/TBX2024/posts/post-with-code/index.html</loc>
+    <lastmod>2024-01-07T16:25:32.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeongchoyun.github.io/TBX2024/posts/welcome/index.html</loc>
+    <lastmod>2024-01-07T16:25:33.671Z</lastmod>
   </url>
   <url>
     <loc>https://jeongchoyun.github.io/TBX2024/index.html</loc>
-    <lastmod>2024-01-07T15:50:29.898Z</lastmod>
+    <lastmod>2024-01-07T16:25:34.619Z</lastmod>
   </url>
 </urlset>
