@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/240108.html",
+    "href": "posts/240108.html",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 연결하는 방법\nssh root@210.117.173.186 -p {MY-PORT}\n\n\n\n- 아래를 실행하여 비밀번호를 바꿀 것\npasswd root \n\n\n\n- 아나콘다 홈페이지 접속 \\(\\to\\) 다운로드 링크 확보 \\(\\to\\) 아나콘다 다운로드\n# 아나콘다 홈페 접속\n# 다운로드링크 확보 (쉬프트+클릭으로 열면 홈페이지 주소 복사가능) \nwget 복사한주소\n- (아나콘다 설치) 아나콘다를 다운받은 폴더로 가서 아래와 같이 실행한다.\nbash Anaconda3-2019.03-Linux-x86_64.sh\n대충 bash Ana 정도까지만 치고 tab을 누르면 알아서 완성된다. (스페이스를 누르면서 라이센스텀을 넘긴다)\n\n\n\n- 가상환경 설정\nconda create -n ag python=3.10\nconda activate ag \n- 주피터랩 설치\nconda install -c conda-forge jupyterlab \nconda install -c conda-forge notebook \n- 패스워드 설정\njupyter notebook password\n## 패스워드 치고\n## 확인해야함\n- 실행\njupyter lab --ip=\"0.0.0.0\" --port={MY-PORT} --no-browser --allow-root &\nexit\n\n\n\n- ref: https://auto.gluon.ai/stable/install.html\nconda activate ag \nconda install -c conda-forge mamba\nmamba install -c conda-forge autogluon\n- tensorflow 등 복잡한?? 모듈들은 따로 가상환경을 만드는 것 추천\n\n\n\n- 아래를 이용하여 가상환경생성, 가상환경활성화, 가상환경에R설치,R실행\nconda create -n r \nconda activate r \nconda install -c conda-forge r-essentials \nR\n- R이 실행되면 아래를 입력\nIRkernel::installspec()\nq() # 이후에 n을 누르고 빠져나간다.\n- 주피터에서 R이 실행되는지 확인한다.\n\n\n\n- 예를들어 데이터시각화 강의노트를 받는다면 아래와 같이 입력한다.\ngit clone https://github.com/guebin/DV2023.git\n- updated된 데이터시각화 강의노트를 받으려면 “해당폴더로 이동한 후” 아래와 같이 입력한다.\ngit pull"
+  },
+  {
+    "objectID": "posts/240108.html#a.-ssh-연결",
+    "href": "posts/240108.html#a.-ssh-연결",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 연결하는 방법\nssh root@210.117.173.186 -p {MY-PORT}"
+  },
+  {
+    "objectID": "posts/240108.html#b.-password-변경",
+    "href": "posts/240108.html#b.-password-변경",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 아래를 실행하여 비밀번호를 바꿀 것\npasswd root"
+  },
+  {
+    "objectID": "posts/240108.html#c.-아나콘다-설치",
+    "href": "posts/240108.html#c.-아나콘다-설치",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 아나콘다 홈페이지 접속 \\(\\to\\) 다운로드 링크 확보 \\(\\to\\) 아나콘다 다운로드\n# 아나콘다 홈페 접속\n# 다운로드링크 확보 (쉬프트+클릭으로 열면 홈페이지 주소 복사가능) \nwget 복사한주소\n- (아나콘다 설치) 아나콘다를 다운받은 폴더로 가서 아래와 같이 실행한다.\nbash Anaconda3-2019.03-Linux-x86_64.sh\n대충 bash Ana 정도까지만 치고 tab을 누르면 알아서 완성된다. (스페이스를 누르면서 라이센스텀을 넘긴다)"
+  },
+  {
+    "objectID": "posts/240108.html#d.-주피터랩-설치-및-실행",
+    "href": "posts/240108.html#d.-주피터랩-설치-및-실행",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 가상환경 설정\nconda create -n ag python=3.10\nconda activate ag \n- 주피터랩 설치\nconda install -c conda-forge jupyterlab \nconda install -c conda-forge notebook \n- 패스워드 설정\njupyter notebook password\n## 패스워드 치고\n## 확인해야함\n- 실행\njupyter lab --ip=\"0.0.0.0\" --port={MY-PORT} --no-browser --allow-root &\nexit"
+  },
+  {
+    "objectID": "posts/240108.html#e.-오토글루온-설치",
+    "href": "posts/240108.html#e.-오토글루온-설치",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- ref: https://auto.gluon.ai/stable/install.html\nconda activate ag \nconda install -c conda-forge mamba\nmamba install -c conda-forge autogluon\n- tensorflow 등 복잡한?? 모듈들은 따로 가상환경을 만드는 것 추천"
+  },
+  {
+    "objectID": "posts/240108.html#f.-r과-jupyter의-연결",
+    "href": "posts/240108.html#f.-r과-jupyter의-연결",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 아래를 이용하여 가상환경생성, 가상환경활성화, 가상환경에R설치,R실행\nconda create -n r \nconda activate r \nconda install -c conda-forge r-essentials \nR\n- R이 실행되면 아래를 입력\nIRkernel::installspec()\nq() # 이후에 n을 누르고 빠져나간다.\n- 주피터에서 R이 실행되는지 확인한다."
+  },
+  {
+    "objectID": "posts/240108.html#f.-git을-이용하여-강의노트-다운로드-업데이트",
+    "href": "posts/240108.html#f.-git을-이용하여-강의노트-다운로드-업데이트",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "",
+    "text": "- 예를들어 데이터시각화 강의노트를 받는다면 아래와 같이 입력한다.\ngit clone https://github.com/guebin/DV2023.git\n- updated된 데이터시각화 강의노트를 받으려면 “해당폴더로 이동한 후” 아래와 같이 입력한다.\ngit pull"
+  },
+  {
+    "objectID": "posts/240108.html#a.-quarto설치",
+    "href": "posts/240108.html#a.-quarto설치",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "A. Quarto설치",
+    "text": "A. Quarto설치\n- 아래를 이용해 설치\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb\ngdebi quarto-1.3.450-linux-amd64.deb"
+  },
+  {
+    "objectID": "posts/240108.html#b.-github-토큰얻기",
+    "href": "posts/240108.html#b.-github-토큰얻기",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "B. github 토큰얻기",
+    "text": "B. github 토큰얻기\n- 아래의 주소로가서 토큰을 생성 (어디에 잘 저장할 것)\n\nhttps://github.com/settings/tokens"
+  },
+  {
+    "objectID": "posts/240108.html#c.-github-repo-생성후-clone",
+    "href": "posts/240108.html#c.-github-repo-생성후-clone",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
+    "section": "C. github repo 생성후 clone",
+    "text": "C. github repo 생성후 clone"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TBX2024",
+    "section": "",
+    "text": "원격컴퓨터에서 개발환경 셋팅하기 (1)\n\n\n\n\n\n\n\n\n\n\n\n\nJan 8, 2024\n\n\n정초윤\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 7, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 4, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  }
+]
