@@ -7,18 +7,32 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/240107.html",
+    "href": "posts/240107.html",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (0)",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "- 아래를 이용하여 설치\napt-get install unzip \napt-get install gdebi-core\n- apt install vs apt-get install: 예전에는 apt-get이었음. 그래서 오래된 앱은 apt-get만 되는것도 있다고함. (본적은없음)\n* apt install / pip install / conda install 차이\n\n설치되는 경로가 다름 (그래서 지우는 법도 다름)\napt install 로 설치되는건 우분투 자체의 프로그램\npip install 로 설치되는건 파이썬 모듈\n우분투자체의 프로그램: Python, CUDA, Anaconda, Quarto, Git, …\nPython의 모듈: Numpy, Pandas, …\nconda install: 모든 종류의 프로그램을 다 설치할 수 있음.. (apt, pip로만 설치가능한 것이 콘다로는 싹 설치가능, 심지어 tidyverse같은 R패키지도 설치가능)\n\n\n\n\n- 아래를 실행\nconda activate ag\npip install kaggle \n- kaggle.json 파일 업로드 + /root/.kaggle로 복사\ncp kaggle.json /root/.kaggle\n\n\n\n- 아래를 실행\nsudo apt-get install git\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb\ngdebi quarto-1.3.450-linux-amd64.deb"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/240107.html#a-zip-gdebi설치",
+    "href": "posts/240107.html#a-zip-gdebi설치",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (0)",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "- 아래를 이용하여 설치\napt-get install unzip \napt-get install gdebi-core\n- apt install vs apt-get install: 예전에는 apt-get이었음. 그래서 오래된 앱은 apt-get만 되는것도 있다고함. (본적은없음)\n* apt install / pip install / conda install 차이\n\n설치되는 경로가 다름 (그래서 지우는 법도 다름)\napt install 로 설치되는건 우분투 자체의 프로그램\npip install 로 설치되는건 파이썬 모듈\n우분투자체의 프로그램: Python, CUDA, Anaconda, Quarto, Git, …\nPython의 모듈: Numpy, Pandas, …\nconda install: 모든 종류의 프로그램을 다 설치할 수 있음.. (apt, pip로만 설치가능한 것이 콘다로는 싹 설치가능, 심지어 tidyverse같은 R패키지도 설치가능)"
+  },
+  {
+    "objectID": "posts/240107.html#b.-kaggle-설정하기",
+    "href": "posts/240107.html#b.-kaggle-설정하기",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (0)",
+    "section": "",
+    "text": "- 아래를 실행\nconda activate ag\npip install kaggle \n- kaggle.json 파일 업로드 + /root/.kaggle로 복사\ncp kaggle.json /root/.kaggle"
+  },
+  {
+    "objectID": "posts/240107.html#c.-git-quarto-설치",
+    "href": "posts/240107.html#c.-git-quarto-설치",
+    "title": "원격컴퓨터에서 개발환경 셋팅하기 (0)",
+    "section": "",
+    "text": "- 아래를 실행\nsudo apt-get install git\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb\ngdebi quarto-1.3.450-linux-amd64.deb"
   },
   {
     "objectID": "posts/240108.html",
@@ -95,13 +109,27 @@
     "href": "posts/240108.html#c.-github-repo-생성후-clone",
     "title": "원격컴퓨터에서 개발환경 셋팅하기 (1)",
     "section": "C. github repo 생성후 clone",
-    "text": "C. github repo 생성후 clone"
+    "text": "C. github repo 생성후 clone\n- 적당한 이름의 repo를 만들것\n\n주의: repository 만들때 readme.md 파일을 생성 할 것. 그래야 이후의 작업이 편리.\n\n- clone이후 local-git과 github를 연결\ngit clone {복사한주소}\ncd {생성된디렉토리}\n## README.md 파일 수정 \ngit add .\ngit commit -m .\n## email, username 등록 \ngit commit -m .\ngit config credential.helper store\ngit push\n## username 입력\n## token 입력\n- blog project 생성후 publish\nquarto create-project --type website:blog\ngit add .\ngit commit -m .\ngit push \nquarto publish --no-browser \n## github선택 \n- 이후에 수정사항이 생기면 아래를 연속적으로 실행\ngit add .\ngit commit -m .\ngit push \nquarto publish --no-browser --no-prompt \n- 깃헙에서 홈페이지 만들경우 대응하는 레포지토리를 찾으면 쉽게 복사가능.\n\nhttps://guebin.github.io/IP2022/2022/03/28/(4주차)-3월28일.html\n\n\n#!wget \"https://raw.githubusercontent.com/guebin/IP2022/master/_notebooks/2022-03-28-(4%EC%A3%BC%EC%B0%A8)%203%EC%9B%9428%EC%9D%BC.ipynb\""
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "TBX2024",
+    "title": "데이터과학 툴박스 (2024)",
     "section": "",
-    "text": "원격컴퓨터에서 개발환경 셋팅하기 (1)\n\n\n\n\n\n\n\n\n\n\n\n\nJan 8, 2024\n\n\n정초윤\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 7, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 4, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJan 8, 2024\n\n\n원격컴퓨터에서 개발환경 셋팅하기 (1)\n\n\n정초윤 \n\n\n\n\nJan 8, 2024\n\n\n원격컴퓨터에서 개발환경 셋팅하기 (0)\n\n\n정초윤 \n\n\n\n\nJan 7, 2024\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n\n\nJan 4, 2024\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   }
 ]
